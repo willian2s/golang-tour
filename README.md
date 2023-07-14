@@ -15,13 +15,13 @@ The Go Tour is an interactive learning resource provided by the Go team. It allo
 2. Clone this repository to your local machine:
 
 ```bash
-  git clone
+  git clone git@github.com:willian2s/golang-tour.git
 ```
 
 3. Navigate to the repository directory:
 
 ```bash
-  cd
+  cd golang-tour
 ```
 
 1. Launch the [Go Tour](https://go.dev/tour/welcome/1)
