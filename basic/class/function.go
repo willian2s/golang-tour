@@ -1,4 +1,4 @@
-package packages
+package class
 
 // Function returns the sum of two integers.
 //

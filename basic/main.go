@@ -3,32 +3,32 @@ package main
 import (
 	"fmt"
 
-	"github.com/willian2s/golang-tour/basic/packages"
+	"github.com/willian2s/golang-tour/basic/class"
 )
 
 func main() {
-	pi := packages.ImportNamed()
+	pi := class.ImportNamed()
 	fmt.Println(pi)
 
-	sum := packages.Function(1, 2)
+	sum := class.Function(1, 2)
 	fmt.Println(sum)
 
-	myFavNumber := packages.FunctionContinue()
+	myFavNumber := class.FunctionContinue()
 	fmt.Println(myFavNumber)
 
-	swapOne, swapTwo := packages.MultipleResults("Willian", "Santos")
+	swapOne, swapTwo := class.MultipleResults("Willian", "Santos")
 	fmt.Println(swapOne, swapTwo)
 
-	x, y := packages.NamedResults(17)
+	x, y := class.NamedResults(17)
 	fmt.Println(x, y)
 
-	packages.Variables()
-	packages.VariablesWIthInitializers()
-	packages.SortVariableDeclaration()
-	packages.BasicTypes()
-	packages.Zero()
-	packages.TypeConversion()
-	packages.TypeInference()
-	packages.Constants()
-	packages.ConstantsNumeric()
+	class.Variables()
+	class.VariablesWIthInitializers()
+	class.SortVariableDeclaration()
+	class.BasicTypes()
+	class.Zero()
+	class.TypeConversion()
+	class.TypeInference()
+	class.Constants()
+	class.ConstantsNumeric()
 }

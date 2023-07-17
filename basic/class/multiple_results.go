@@ -1,4 +1,4 @@
-package packages
+package class
 
 // MultipleResults returns the two input strings swapped.
 //
