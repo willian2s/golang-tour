@@ -25,4 +25,10 @@ func main() {
 	packages.Variables()
 	packages.VariablesWIthInitializers()
 	packages.SortVariableDeclaration()
+	packages.BasicTypes()
+	packages.Zero()
+	packages.TypeConversion()
+	packages.TypeInference()
+	packages.Constants()
+	packages.ConstantsNumeric()
 }
