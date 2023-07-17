@@ -1,4 +1,4 @@
-package class
+package flow_control
 
 func Switch(os string) string {
 	switch os {

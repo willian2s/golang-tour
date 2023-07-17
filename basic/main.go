@@ -76,6 +76,8 @@ func mainFlowControl() {
 	flowControl.DeferMulti() // LIFO = Last In First Out
 }
 
+func mainMoreTypes() {}
+
 func main() {
 	mainPackages()
 

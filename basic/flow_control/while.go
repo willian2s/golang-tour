@@ -1,4 +1,4 @@
-package class
+package flow_control
 
 func While() int {
 	sum := 1

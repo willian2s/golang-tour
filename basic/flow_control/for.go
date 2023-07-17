@@ -1,4 +1,4 @@
-package class
+package flow_control
 
 // For calculates the sum of numbers from 0 to 9 using a for loop.
 //
