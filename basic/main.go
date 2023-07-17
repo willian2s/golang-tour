@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 	"runtime"
 	"time"
 
@@ -9,6 +10,7 @@ import (
 	moreTypes "github.com/willian2s/golang-tour/basic/more_types"
 	"github.com/willian2s/golang-tour/basic/packages"
 	"golang.org/x/tour/pic"
+	"golang.org/x/tour/wc"
 )
 
 func MainPackages() {
@@ -131,6 +133,43 @@ func MainMoreTypes() {
 	// Slice Exercise
 	pic.Show(moreTypes.Pic)
 	// Slice Exercise
+
+	m := moreTypes.Map()
+	fmt.Println("Map", m)
+
+	mapLiterals := moreTypes.MapLiterals()
+	fmt.Println("MapLiterals", mapLiterals)
+
+	moreTypes.MapMutation()
+
+	// Map Exercise
+	s := "Hello"
+	counts := moreTypes.WordCount(s)
+	fmt.Println("WordCount", counts)
+	wc.Test(moreTypes.WordCount)
+	// Map Exercise
+
+	hypot := func(x, y float64) float64 {
+		return math.Sqrt(x*x + y*y)
+	}
+	fmt.Println("hypot", hypot(5, 12))
+
+	compute := moreTypes.Compute(hypot)
+	fmt.Println("Compute", compute)
+	compute = moreTypes.Compute(math.Pow)
+	fmt.Println("Compute", compute)
+
+	pos, neg := moreTypes.Adder(), moreTypes.Adder()
+	for i := 0; i < 10; i++ {
+		fmt.Println(pos(i), neg(-2*i))
+	}
+
+	// Fibonacci Exercise
+	f := moreTypes.Fibonacci()
+	for i := 0; i < 10; i++ {
+		fmt.Println(f())
+	}
+	// Fibonacci Exercise
 }
 
 func main() {
