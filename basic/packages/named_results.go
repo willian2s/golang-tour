@@ -1,4 +1,4 @@
-package class
+package packages
 
 // NamedResults splits an integer into two parts.
 //
