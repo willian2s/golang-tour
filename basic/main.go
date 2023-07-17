@@ -6,10 +6,11 @@ import (
 	"time"
 
 	flowControl "github.com/willian2s/golang-tour/basic/flow_control"
+	moreTypes "github.com/willian2s/golang-tour/basic/more_types"
 	"github.com/willian2s/golang-tour/basic/packages"
 )
 
-func mainPackages() {
+func MainPackages() {
 	pi := packages.ImportNamed()
 	fmt.Println(pi)
 
@@ -36,7 +37,7 @@ func mainPackages() {
 	packages.ConstantsNumeric()
 }
 
-func mainFlowControl() {
+func MainFlowControl() {
 	forSum := flowControl.For()
 	fmt.Println("For: ", forSum)
 	forSumContinue := flowControl.For()
@@ -76,10 +77,54 @@ func mainFlowControl() {
 	flowControl.DeferMulti() // LIFO = Last In First Out
 }
 
-func mainMoreTypes() {}
+func MainMoreTypes() {
+	pointerOne, pointerTwo := moreTypes.Pointer(1, 2)
+	fmt.Println("Pointer", pointerOne, pointerTwo)
+
+	vertex := moreTypes.Struct(1, 2)
+	fmt.Println("Struct", vertex)
+
+	vertex = moreTypes.StructField(1, 2)
+	fmt.Println("StructField", vertex)
+
+	vertex = moreTypes.StructPointer(1, 2)
+	fmt.Println("StructPointer", vertex)
+
+	moreTypes.StrucLiteral()
+
+	arrayOne, arrayTwo := moreTypes.Array()
+	fmt.Println("Array", arrayOne, arrayTwo)
+
+	array, slice := moreTypes.Slice()
+	fmt.Println("Array", array, "Slice", slice)
+
+	name := moreTypes.SlicePointers()
+	fmt.Println("Name", name)
+
+	sliceInteger, sliceBoolean, sliceStruc := moreTypes.SliceLiterals()
+	fmt.Println("SliceInteger", sliceInteger, "SliceBoolean", sliceBoolean, "SliceStruc", sliceStruc)
+
+	sliceBounds := moreTypes.SliceBounds()
+	fmt.Println("SliceBounds", sliceBounds)
+
+	sliceLenCaps := moreTypes.SliceLenCap()
+	fmt.Println("SliceLenCap", sliceLenCaps)
+
+	var mySlice []int
+	sliceNil, err := moreTypes.SliceNil(mySlice)
+	fmt.Println("SliceNil", sliceNil, "Error", err)
+
+	mySlice = []int{1, 2, 3, 4, 5}
+	sliceNil, err = moreTypes.SliceNil(mySlice)
+	fmt.Println("SliceNil", sliceNil, "Error", err)
+
+	moreTypes.MakingSlice()
+	moreTypes.SliceOfSlice()
+
+	sliceAppend := moreTypes.Append()
+	fmt.Println("SliceAppend", sliceAppend)
+}
 
 func main() {
-	mainPackages()
-
-	mainFlowControl()
+	MainMoreTypes()
 }
