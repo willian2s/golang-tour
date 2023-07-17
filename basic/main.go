@@ -8,6 +8,7 @@ import (
 	flowControl "github.com/willian2s/golang-tour/basic/flow_control"
 	moreTypes "github.com/willian2s/golang-tour/basic/more_types"
 	"github.com/willian2s/golang-tour/basic/packages"
+	"golang.org/x/tour/pic"
 )
 
 func MainPackages() {
@@ -126,6 +127,10 @@ func MainMoreTypes() {
 
 	moreTypes.Range()
 	moreTypes.MakeRange()
+
+	// Slice Exercise
+	pic.Show(moreTypes.Pic)
+	// Slice Exercise
 }
 
 func main() {
