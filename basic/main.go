@@ -123,6 +123,9 @@ func MainMoreTypes() {
 
 	sliceAppend := moreTypes.Append()
 	fmt.Println("SliceAppend", sliceAppend)
+
+	moreTypes.Range()
+	moreTypes.MakeRange()
 }
 
 func main() {
