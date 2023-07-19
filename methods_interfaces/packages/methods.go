@@ -8,11 +8,15 @@ type Method struct {
 
 type MyFloat float64
 
-func (m Method) MAbs() float64 {
+type Abser interface {
+	Abs() float64
+}
+
+func (m Method) Abs() float64 {
 	return math.Sqrt(m.X*m.X + m.Y*m.Y)
 }
 
-func (f MyFloat) FAbs() float64 {
+func (f MyFloat) Abs() float64 {
 	if f < 0 {
 		return float64(-f)
 	}
